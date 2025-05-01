@@ -141,6 +141,52 @@
     </div>
   </footer>
 
+  <!-- Modal (Hidden by default, with an overlay) -->
+  <div id="reservationModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-md mx-auto">
+      <h3 class="text-xl font-semibold mb-4">Reservation Submitted</h3>
+      <p id="modalMessage" class="mb-4">
+        Thank you for booking with us. We will contact you soon regarding your reservation.
+      </p>
+      <button id="closeModal" class="bg-[var(--color-caramel)] hover:bg-[var(--color-brownie)] text-white px-6 py-2 rounded transition">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- JavaScript to handle form submission and modal display -->
+  <script>
+    const reservationForm = document.querySelector("form");
+    reservationForm.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent default form submission
+
+      // Retrieve and trim the form values
+      const fullName = document.getElementById("fullName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const date = document.getElementById("date").value.trim();
+      const time = document.getElementById("time").value.trim();
+
+      let modalMessageText = "";
+
+      // Check if any required field is empty and set the modal message accordingly
+      if (fullName === "" || phone === "" || date === "" || time === "") {
+        modalMessageText = "Please fill in all the required fields.";
+      } else {
+        modalMessageText = "Thank you for your booking! We will contact you soon regarding your reservation.";
+      }
+
+      // Update the modal message text
+      document.getElementById("modalMessage").innerText = modalMessageText;
+
+      // Display the modal
+      document.getElementById("reservationModal").classList.remove("hidden");
+    });
+
+    // Close modal functionality
+    document.getElementById("closeModal").addEventListener("click", function () {
+      document.getElementById("reservationModal").classList.add("hidden");
+    });
+  </script>
 </body>
 
 </html>
