@@ -31,6 +31,7 @@
 @section('content')
 <!-- HERO SECTION -->
 <section class="relative h-screen animate-fadeInUp">
+<<<<<<< HEAD
   <!-- Changed hero background image -->
   <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/img/website-imgs/hero-bg3.jpg');"></div>
   <!-- Removed mt-20 so the hero content sits flush with the header -->
@@ -40,6 +41,41 @@
       <div class="md:w-1/2 text-left space-y-6">
         <h1 class="headline text-5xl md:text-6xl font-bold leading-tight" style="font-family: 'Playfair Display', serif; color: var(--color-brownie);">
           Crafted with care, poured with passion 
+=======
+      <!-- Changed hero background image -->
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/img/website-imgs/hero-bg2.jpg');"></div>
+      <!-- Removed mt-20 so the hero content sits flush with the header -->
+      <div class="relative z-10 h-full flex items-center px-12">
+        <div class="flex-grow flex flex-col md:flex-row items-center w-full">
+          <!-- Left Side: Text Content -->
+          <div class="md:w-1/2 text-left space-y-6">
+            <h1 class="headline text-5xl md:text-6xl font-bold leading-tight" style="font-family: 'Playfair Display', serif; color: var(--color-brownie);">
+              Crafted with care, poured with passion 
+            </h1>
+            <p class="text-lg max-w-md" style="color: var(--color-coffee);">
+              each creation is a testament to the dedication and love that goes into making every detail truly unforgettable.
+            </p>
+            <button id="seeAllBtn" class="button mt-4 px-6 py-3 text-white font-medium rounded-full transition transform duration-300 hover:text-white hover:scale-105 cursor-pointer">
+              See All <i class="fa-solid fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+          <!-- Right Side: Extra Image with adjustments -->
+          <div class="md:w-1/2 mt-8 md:mt-0 flex items-center justify-center">
+            <img src="/img/website-imgs/extra-bg3.png" 
+                 alt="Hero Extra Image" 
+                 class="w-3/4 object-cover object-center"
+                 style="margin-top: -100px;"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ABOUT TINATANGI SECTION -->
+    <section id="about" class="py-16 bg-[var(--color-cream)] scroll-mt-24">
+      <div class="container mx-auto px-8">
+        <h1 class="text-5xl md:text-6xl font-bold text-center" style="font-family: 'Raleway', sans-serif; color: var(--color-caramel);">
+          About Tinatangi
+>>>>>>> 7eac3b69086d43284420aa53cb295c895d736112
         </h1>
         <p class="text-lg max-w-md" style="color: var(--color-coffee);">
           each creation is a testament to the dedication and love that goes into making every detail truly unforgettable.
